@@ -154,3 +154,13 @@ body {
 .btn-derecha:hover{
     cursor: pointer;
 }
+#cargado {
+    display: none;
+}
+table {
+    font-size: 2rem;
+    padding: 1rem;
+}
+table th{
+    padding: 2.5rem;
+}

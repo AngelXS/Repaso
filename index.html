@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script type="text/javascript" src="funciones.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> 
 </head>
@@ -21,8 +22,8 @@
     </div>
     <div class="buscador">
         <h1 class="titulo-principal">Dojonary</h1>
-        <input type="text" value="Search">
-        <button class="boton">Login</button>
+        <input type="text" value="Search" id="entrada" onclick="borrar()">
+        <button class="boton" onclick="cambiar(this)">Login</button>
     </div>
     <div class="contenido">
         <div class="izquierdo">
@@ -31,7 +32,7 @@
                     <h2>ninja</h2>
                     <h3>noun</h3>
                     <h4>Plural: ninjas</h4>
-                    <button class="btn-info"><span id="likes">0</span> Likes</button>
+                    <button class="btn-info" onclick="aumentar(document.getElementById('likes'))"><span id="likes">0</span> Likes</button>
                 </div>
                 <div class="definicion">
                     <p>A practitioner skilled in the</p>
@@ -43,7 +44,7 @@
                     <h2>ninja</h2>
                     <h3>noun</h3>
                     <h4>Plural: ninjas</h4>
-                    <button class="btn-info"><span id="likes2">0</span> Likes</button>
+                    <button class="btn-info" onclick="aumentar(document.getElementById('likes2'))"><span id="likes2">0</span> Likes</button>
                 </div>
                 <div class="definicion">
                     <p>A practitioner skilled in the</p>
@@ -54,7 +55,15 @@
         <div class="derecho">
             <div class="agregar articulo">
                 <h2>Dojonary is <br>defined by YOU</h2>
-                <button class="btn-derecha">Add Definition</button>    
+                <button class="btn-derecha" id="defin" onclick="quitar()">Add Definition</button>    
+            </div>
+            <button class="btn-info" onclick="cargando(); tabla();">Cargar lista</button>
+            <div id="cargado">
+                <select onchange="cambio(this)">
+                    <option value="a">Mayores</option>
+                    <option value="b">Menores</option>
+                </select>
+                <div id="aux_1"></div>
             </div>
         </div>
     </div>
