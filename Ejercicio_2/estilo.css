@@ -1,0 +1,96 @@
+:root {
+    --fuente: 'Comic Neue', cursive;
+    --color_head:  #cccccc;
+    --colorBtnLikes: #fddc64;
+    --colorBtnAdd: #848782;
+    --colorBtnLogin: #488dd1;
+    --colorBlanco: white;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+/*Para trabajar con normalize.css armonizar la visualización de la página web*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+* {   
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--fuente);
+    line-height: 2rem;
+}
+body {
+    padding: 1rem 15rem 0rem 15rem;
+}
+.barra {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.barra a{
+    text-decoration: none;
+    border-right: 0.3rem solid black;
+    padding: 0 1rem;
+    font-size: 3rem;
+    color: black;
+    font-weight: bold;
+}
+#diferente {
+    border-right: 0;
+}
+.buscar {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    align-items: center;
+}
+.texto {
+    border: 0.3rem solid black;
+}
+.buscador {
+    border: 0.3rem solid black;
+    padding: 0 1rem;
+}
+.btnenviar {
+    background-color: skyblue;
+    color: black;
+    font-size: 2rem;
+    padding: 0 1rem;
+    font-weight: bold;
+    border: 0.2 solid black;
+    box-shadow: 6px 5px 1px black;
+}
+table {
+    font-size: 2rem;
+    margin-top: 2rem;
+    /*Centrar tabla*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;   
+    border-collapse: collapse;
+}
+table th, td{
+    padding: 0 10rem;
+}
+table th {
+    background-color: var(--colorBtnAdd);
+    border-top: 0.3rem solid black;
+    border-left: 0.3rem solid black;
+    border-right: 0.3rem solid black;
+}
+table td {
+    border-left: 0.3rem solid black;
+    border-right: 0.3rem solid black;
+}
