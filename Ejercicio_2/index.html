@@ -22,14 +22,14 @@
     <!--action="/process" method="post"-->
     <div>
         <div class="buscar">
-            <input type="text" value="Buscar Nombre" class="texto" id = "texto1">
+            <input type="text" value="Buscar Nombre" class="texto" id = "texto1" onclick="limpiar()">
             <h2>Search by: </h2>
-            <select class="buscador">
-                <option value="#"></option>
+            <select class="buscador" id="b" onchange="cambiar(document.getElementById('b').value)">
+                <option value="#">Todos</option>
                 <option value="a">Ingeniero</option>
-                <option value="a">Doctor</option>
-                <option value="a">Profesor</option>
-                <option value="a">Cantante</option>
+                <option value="b">Doctor</option>
+                <option value="c">Profesor</option>
+                <option value="d">Cantante</option>
             </select>
             <button class="btnenviar" onclick="buscar(document.getElementById('texto1').value)">Enviar</button>
             <!--<input type="submit" value="Enviar" class="btnenviar" onclick="buscar(document.getElementById('texto').innerText)">-->

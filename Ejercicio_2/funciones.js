@@ -29,3 +29,54 @@ var buscar = (buscado) => {
     console.log(cadena);
     document.getElementById("tabla").innerHTML = cadena;
 }
+var limpiar = () => document.getElementById("texto1").value=""; 
+
+var cambiar = (element) => {
+    if(element == "a"){
+        cadena = "<table><tr><th>Nombre</th><th>Profesion</th><th>Edad</th></tr>";
+        clientes.forEach(element => {
+            if(element.profesion == "Ingeniero"){
+                cadena=cadena+"<tr><td>"+element.nombre+"</td>"+"<td>"+element.profesion+"</td>"+"<td>"+element.edad+"</td></tr>";
+            }
+        });
+        cadena =cadena+"<tr><th></th><th></th><th></th></tr>";
+        cadena=cadena+"</table>";
+        document.getElementById("tabla").innerHTML = cadena;
+    }
+    else if(element=="b"){
+        cadena = "<table><tr><th>Nombre</th><th>Profesion</th><th>Edad</th></tr>";
+        clientes.forEach(element => {
+            if(element.profesion == "Doctor"){
+                cadena=cadena+"<tr><td>"+element.nombre+"</td>"+"<td>"+element.profesion+"</td>"+"<td>"+element.edad+"</td></tr>";
+            }
+        });
+        cadena =cadena+"<tr><th></th><th></th><th></th></tr>";
+        cadena=cadena+"</table>";
+        document.getElementById("tabla").innerHTML = cadena;
+    }
+    else if(element=="c"){
+        cadena = "<table><tr><th>Nombre</th><th>Profesion</th><th>Edad</th></tr>";
+        clientes.forEach(element => {
+            if(element.profesion == "Profesor"){
+                cadena=cadena+"<tr><td>"+element.nombre+"</td>"+"<td>"+element.profesion+"</td>"+"<td>"+element.edad+"</td></tr>";
+            }
+        });
+        cadena =cadena+"<tr><th></th><th></th><th></th></tr>";
+        cadena=cadena+"</table>";
+        document.getElementById("tabla").innerHTML = cadena;
+    }
+    else if(element=="d"){
+        cadena = "<table><tr><th>Nombre</th><th>Profesion</th><th>Edad</th></tr>";
+        clientes.forEach(element => {
+            if(element.profesion == "Cantante"){
+                cadena=cadena+"<tr><td>"+element.nombre+"</td>"+"<td>"+element.profesion+"</td>"+"<td>"+element.edad+"</td></tr>";
+            }
+        });
+        cadena =cadena+"<tr><th></th><th></th><th></th></tr>";
+        cadena=cadena+"</table>";
+        document.getElementById("tabla").innerHTML = cadena;
+    }
+    else {
+        cargardatos();
+    }
+}
